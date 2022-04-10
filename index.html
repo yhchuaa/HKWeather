@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+<link rel="stylesheet" href="index.css">
+<body>
+    <section class="container">
+        <div class="header">
+            <p class="area" id="area"></p>
+            <span class="h-weather"><img src="http://www.weather.gov.hk/images/HKOWxIconOutline/pic50.png" class="icon" id="icon"></span>
+            <img src="weather/temp.png" class="i-temp">
+            <img src="weather/humidity.png" class="i-humi">
+            <img src="weather/rainfall.png" class="i-rainfall">
+            <span class="h-temp" id="h-temp">31</span>
+            <span class="h-humi" id="h-humi">77%</span>
+            <span class="h-rainfall" id="h-rainfall">200mm</span>
+            <p class="h-info" id="h-info"></p>
+        </div>
+        <section class="locations" id="locations">
+            <div class="loc1" id="location">
+                <p class="name" id="name1">Kwun Tong</p>
+                <p class="loctemp" id="loctemp1">31</p>
+            </div>
+            <div class="loc2" id="location">
+                <p class="name" id="name2">Kwun Tong</p>
+                <p class="loctemp" id="loctemp2">31</p>
+            </div>
+            <div class="loc3" id="location">
+                <p class="name" id="name3">Kwun Tong</p>
+                <p class="loctemp" id="loctemp3">31</p>
+            </div>
+            <div class="loc4" id="location">
+                <p class="name" id="name4">Kwun Tong</p>
+                <p class="loctemp" id="loctemp4">31</p>
+            </div>
+            <div class="loc5" id="location">
+                <p class="name" id="name5">Kwun Tong</p>
+                <p class="loctemp" id="loctemp5">31</p>
+            </div>
+            <div class="loc6" id="location">
+                <p class="name" id="name6">Kwun Tong</p>
+                <p class="loctemp" id="loctemp6">31</p>
+            </div>
+            <div class="loc7" id="location">
+                <p class="name" id="name7">Kwun Tong</p>
+                <p class="loctemp" id="loctemp7">31</p>
+            </div>
+            <div class="loc8" id="location">
+                <p class="name" id="name8">Kwun Tong</p>
+                <p class="loctemp" id="loctemp8">31</p>
+            </div>
+            <div class="loc9" id="location">
+                <p class="name" id="name9">Kwun Tong</p>
+                <p class="loctemp" id="loctemp9">31</p>
+            </div>
+            <div class="loc10" id="location">
+                <p class="name" id="name10">Kwun Tong</p>
+                <p class="loctemp" id="loctemp10">31</p>
+            </div>
+        </section>
+        <section class="days" id="days">
+            <div class="day1" id="day">
+                <p class="date" id="date1"></p>
+                <p class="week" id="week1"></p>
+                <p class="maxtemp" id="maxtemp1"></p>
+                <p class="mintemp" id="mintemp1"></p>
+                <img src="http://www.weather.gov.hk/images/HKOWxIconOutline/pic50.png" class="fweather" id="fweather1">
+            </div>
+            <div class="day2" id="day">
+                <p class="date" id="date2"></p>
+                <p class="week" id="week2"></p>
+                <p class="maxtemp" id="maxtemp2"></p>
+                <p class="mintemp" id="mintemp2"></p>
+                <img src="http://www.weather.gov.hk/images/HKOWxIconOutline/pic50.png" class="fweather" id="fweather2">
+            </div>
+            <div class="day3" id="day">
+                <p class="date" id="date3"></p>
+                <p class="week" id="week3"></p>
+                <p class="maxtemp" id="maxtemp3"></p>
+                <p class="mintemp" id="mintemp3"></p>
+                <img src="http://www.weather.gov.hk/images/HKOWxIconOutline/pic50.png" class="fweather" id="fweather3">
+            </div>
+            <div class="day4" id="day">
+                <p class="date" id="date4"></p>
+                <p class="week" id="week4"></p>
+                <p class="maxtemp" id="maxtemp4"></p>
+                <p class="mintemp" id="mintemp4"></p>
+                <img src="http://www.weather.gov.hk/images/HKOWxIconOutline/pic50.png" class="fweather" id="fweather4">
+            </div>
+            <div class="day5" id="day">
+                <p class="date" id="date5"></p>
+                <p class="week" id="week5"></p>
+                <p class="maxtemp" id="maxtemp5"></p>
+                <p class="mintemp" id="mintemp5"></p>
+                <img src="http://www.weather.gov.hk/images/HKOWxIconOutline/pic50.png" class="fweather" id="fweather5">
+            </div>
+        </section>
+        <div class="footer">
+            <span class="chosen" id="chosen"></span>
+            <span class="left" id="left" onclick="left()">Previous</span>
+            <span class="district" onclick="district()">District</span>
+            <span class="future" onclick="future()">Future Weather</span>
+            <span class="right" id="right" onclick="right()">Next</span>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>

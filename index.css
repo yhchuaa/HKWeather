@@ -1,0 +1,251 @@
+body{
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff);
+}
+
+div{
+    width: 95%;
+    height: 95%;
+    opacity: 70%;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 30% 60% 10%;
+    grid-template-areas: "header" "days" "footer";
+    justify-items: center;
+    align-items: center;
+}
+
+.header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 40% 15% 15% 15% 15%;
+    grid-template-rows: 40% 30% 30%;
+    grid-template-areas: 
+    "area h-weather i-temp i-humi i-rainfall" 
+    "area h-weather h-temp h-humi h-rainfall" 
+    "h-info h-weather blank blank blank";
+    justify-items: center;
+    align-items: center ;
+    color: white;
+    font-size: 50px;
+}
+
+.area{
+    grid-area: area;
+    font-size: 80px;
+}
+.h-weather{
+    grid-area: h-weather;
+}
+.i-temp{
+    height: 70%;
+    width: auto;
+    grid-area: i-temp;
+    bottom: 0;
+}
+.i-humi{
+    height: 70%;
+    width: auto;
+    grid-area: i-humi;
+    bottom: 0;
+}
+.i-rainfall{
+    height: 70%;
+    width: auto;
+    grid-area: i-rainfall;
+    bottom: 0;
+}
+.h-temp{grid-area: h-temp;}
+.h-humi{grid-area: h-humi;}
+.h-info{grid-area: h-info;}
+.h-rainfall{grid-area: h-rainfall;}
+
+.icon{
+    height: 60%;
+    width: auto;
+    max-width: 100%;
+}
+
+.header span{
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "hicon data";
+}
+.hicon{
+    height: 100%;
+    grid-area: hicon;
+}
+
+.h-info{
+    font-size: 30px;
+}
+
+.days{
+    width: 95%;
+    height: 100%;
+    grid-area: days;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-areas: "day1 day2 day3 day4 day5";
+    justify-items: center;
+    align-items: center;
+    display: grid;
+}
+
+.locations{
+    width: 95%;
+    height: 100%;
+    grid-area: days;
+    display: none;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "loc6 loc7 loc8 loc9 loc10" "loc1 loc2 loc3 loc4 loc5";
+    justify-items: center;
+    align-items: center;
+}
+
+.loc1{grid-area: loc1;}
+.loc2{grid-area: loc2;}
+.loc3{grid-area: loc3;}
+.loc4{grid-area: loc4;}
+.loc5{grid-area: loc5;}
+.loc1{grid-area: loc6;}
+.loc2{grid-area: loc7;}
+.loc3{grid-area: loc8;}
+.loc4{grid-area: loc9;}
+.loc5{grid-area: loc10;}
+.name{grid-area: name;}
+
+.loctemp{
+    grid-area: loctemp;
+    font-size: 50px;
+}
+
+#location{
+    display: grid;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: "name" "loctemp";
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+.day1{grid-area: day1;}
+.day2{grid-area: day2;}
+.day3{grid-area: day3;}
+.day4{grid-area: day4;}
+.day5{grid-area: day5;}
+.date{grid-area: date;}
+.week{grid-area: week;}
+.maxtemp{grid-area: maxtemp;}
+.mintemp{grid-area: mintemp;}
+
+.fweather{
+    grid-area: fweather;
+    height: 70%;
+    width: auto;
+}
+
+#day{
+    display: grid;
+    grid-template-rows: 20% 50% 30%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "date week" "fweather fweather" "maxtemp mintemp";
+    color: white;
+    justify-items: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.footer{
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: "left district future right";
+    color: white;
+    align-items: center;
+    justify-items: center;
+    font-size: 30px;
+}
+
+.left{
+    grid-area: left;
+}
+
+.district{
+    grid-area: district;
+}
+
+.future{
+    grid-area: future;
+}
+
+.right{
+    grid-area: right;
+}
+
+.chosen{
+    grid-area: future;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+    transition: 1s;
+    z-index: -999;
+}
+
+.footer span:hover{
+    color: grey;
+    cursor: pointer;
+}
+
+@media all and (max-width: 1024px) {
+    .container{
+        grid-template-rows: 50% 40% 10%;
+        height: 100%;
+    }
+    
+    body{
+        height: 100%;
+    }
+
+    .header{
+        grid-template-columns: 30% 30% 40%;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-areas: 
+        "area area h-info"
+        "i-temp h-temp h-info"
+        "i-humi h-humi h-weather"
+        "i-rainfall h-rainfall h-weather";
+        font-size: 70px;
+    }
+
+    .h-info{
+        font-size: 50px;
+        text-align: center;
+        width: 80%;
+    }
+
+    #day{
+        font-size: 30px;
+    }
+
+    .fweather{
+        height: auto;
+        width: 90%;
+
+    }
+
+    .icon{
+        height: 80%;
+    }
+}
